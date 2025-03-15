@@ -3,6 +3,8 @@ import { Squares } from "@/components/ui/squares-background"
 
 import Image from "next/image";
 import Link from "next/link";
+import Typing from "@/components/ui/typing";
+import GlowText from "@/components/glow-text";
 
 export default function Home() {
   return (
@@ -21,11 +23,11 @@ export default function Home() {
         <div className="container w-[780px] h-[500px]  rounded-3xl flex flex-col items-center justify-center">
           <Image src="/icon.webp" alt="icon" width={150} height={150} className="mx-auto mt-10 rounded-full"/>
           <div className="text-center">
-            <h1 className="text-4xl pt-3 ">Yuki</h1>
+            <GlowText className="text-4xl pt-3 ">Yuki</GlowText>
             <p className="text-sm">@m9j8</p>
           </div>
           <div className="py-8 flex flex-col items-center">
-            <p>I&apos;m Japanese Student</p>
+            <Typing>I&apos;m Japanese Student</Typing>
             <div className="flex space-x-4 py-5">
               <Image src="/py.webp" alt="py-logo" width={50} height={50}/>
               <Image src="/ts.webp" alt="ts-logo" width={50} height={50}/>
