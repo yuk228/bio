@@ -31,7 +31,7 @@ export default function Home() {
               <Image src="/ts.webp" alt="ts-logo" width={50} height={50}/>
             </div>
             <div className="flex space-x-2 mt-4">
-              <Link href="https://x.com/yuk_228" className="hover:scale-105"><Twitter size={35}/></Link>
+              <Link href="https://x.com/yuk228_" className="hover:scale-105"><Twitter size={35}/></Link>
               <Link href="https://github.com/yuk228" className="hover:scale-105"><Github size={35}/></Link>
             </div>
           </div>
