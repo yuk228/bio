@@ -25,7 +25,7 @@ export default function Home() {
             <p className="text-sm">@m9j8</p>
           </div>
           <div className="py-8 flex flex-col items-center">
-            <p>I'm Japanese Student</p>
+            <p>I&apos;m Japanese Student</p>
             <div className="flex space-x-4 py-5">
               <Image src="/py.webp" alt="py-logo" width={50} height={50}/>
               <Image src="/ts.webp" alt="ts-logo" width={50} height={50}/>
