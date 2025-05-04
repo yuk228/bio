@@ -21,7 +21,7 @@ export default function Home() {
           <div className="w-full h-[200px] overflow-hidden">
             <Image src="/friren.gif" alt="banner" width={780} height={200} className="w-full h-full object-cover rounded-t-3xl"/>
           </div>
-          <div className="flex items-center justify-center absolute top-[180px] left-1/2 transform -translate-x-1/2">
+          <div className="flex items-center justify-center absolute top-[150px] md:top-[180px] left-1/2 transform -translate-x-1/2">
             <Image src="/icon.webp" alt="icon" width={150} height={150} className="rounded-full border-2 border-white/30 shadow-lg"/>
           </div>
           <div className="text-center pt-20">
