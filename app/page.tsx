@@ -12,12 +12,12 @@ import GlowText from "@/components/glow-text";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen ">
       <div className="absolute inset-0 -z-10">
         <div className="bg-[url('/background.webp')] bg-cover bg-center bg-no-repeat blur-sm h-full w-full"></div>
       </div>
       <div className="relative flex items-center justify-center min-h-screen">
-        <div className="container m-4 w-[780px] h-[800px] rounded-3xl flex flex-col items-center bg-foreground/10 shadow-2xl shadow-foreground/10 border-2 border-sky-500/20">
+        <div className="container m-4 w-[780px] h-[800px] rounded-3xl flex flex-col items-center bg-sky-500/20 shadow-2xl shadow-foreground/10 border-2 border-sky-500/20">
           <div className="w-full h-[200px] overflow-hidden">
             <Image src="/friren.gif" alt="banner" width={780} height={200} className="w-full h-full object-cover rounded-t-3xl"/>
           </div>
@@ -25,20 +25,19 @@ export default function Home() {
             <Image src="/icon.webp" alt="icon" width={150} height={150} className="rounded-full border-2 border-white/30 shadow-lg"/>
           </div>
           <div className="text-center pt-20">
-            <GlowText className="text-4xl ">Yuki</GlowText>
-            <p className="text-sm">@64559</p>
+            <GlowText className="text-4xl ">browserscan</GlowText>
           </div>
-          <div className="py-8 flex flex-col items-center">
-            <Typing>I&apos;m Japanese Student</Typing>
-            <Typing>I&apos;m interested in privacy protection</Typing>
-            <div className="flex space-x-4 py-5">
+          <div className="py-8 flex flex-col items-center font-bold">
+            <Typing>Hello I&apos;m Japanese Student</Typing>
+            <Typing>REMEMBER ME</Typing>
+            {/* <div className="flex space-x-4 py-5">
               <Image src="/py.webp" alt="py-logo" width={50} height={50}/>
               <Image src="/ts.webp" alt="ts-logo" width={50} height={50}/>
-            </div>
+            </div> */}
             <div className="flex space-x-2 mt-4">
               <TooltipProvider>
                 <Tooltip>
-                  <TooltipTrigger><Link href="https://x.com/yuk228_" className="hover:scale-105"><Twitter size={35}/></Link></TooltipTrigger>
+                  <TooltipTrigger><Link href="https://x.com/gpt_o3" className="hover:scale-105"><Twitter size={35}/></Link></TooltipTrigger>
                   <TooltipContent>
                     <p>Twitter</p>
                   </TooltipContent>
@@ -57,6 +56,8 @@ export default function Home() {
                 </Tooltip>
               </TooltipProvider>
             </div>
+          </div>
+          <div className="border-t border-sky-500/20 w-full">
           </div>
         </div>
       </div>
