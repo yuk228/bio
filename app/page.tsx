@@ -1,5 +1,4 @@
 import { Earth, Github, Twitter } from "lucide-react";
-import { Squares } from "@/components/ui/squares-background"
 import {
   Tooltip,
   TooltipContent,
