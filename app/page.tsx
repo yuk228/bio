@@ -15,20 +15,19 @@ export default function Home() {
   return (
     <main className="relative min-h-screen">
       <div className="absolute inset-0 -z-10">
-        <Squares 
-            direction="diagonal"
-            speed={0.5}
-            squareSize={40}
-            borderColor="#333" 
-            hoverFillColor="#222"
-          />
+        <div className="bg-[url('/background.webp')] bg-cover bg-center bg-no-repeat blur-sm h-full w-full"></div>
       </div>
       <div className="relative flex items-center justify-center min-h-screen">
-        <div className="container w-[780px] h-[500px]  rounded-3xl flex flex-col items-center justify-center">
-          <Image src="/icon.webp" alt="icon" width={150} height={150} className="mx-auto mt-10 rounded-full"/>
-          <div className="text-center">
-            <GlowText className="text-4xl pt-3 ">Yuki</GlowText>
-            <p className="text-sm">@m9j8</p>
+        <div className="container m-4 w-[780px] h-[800px] rounded-3xl flex flex-col items-center bg-foreground/10 shadow-2xl shadow-foreground/10 border-2 border-sky-500/20">
+          <div className="w-full h-[200px] overflow-hidden">
+            <Image src="/friren.gif" alt="banner" width={780} height={200} className="w-full h-full object-cover rounded-t-3xl"/>
+          </div>
+          <div className="flex items-center justify-center absolute top-[180px] left-1/2 transform -translate-x-1/2">
+            <Image src="/icon.webp" alt="icon" width={150} height={150} className="rounded-full border-2 border-white/30 shadow-lg"/>
+          </div>
+          <div className="text-center pt-20">
+            <GlowText className="text-4xl ">Yuki</GlowText>
+            <p className="text-sm">@64559</p>
           </div>
           <div className="py-8 flex flex-col items-center">
             <Typing>I&apos;m Japanese Student</Typing>

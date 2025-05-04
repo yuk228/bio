@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "@m9j8",
-  description: "",
+  title: "@64559",
+  description: "64559's bio page",
 };
 
 export default function RootLayout({
