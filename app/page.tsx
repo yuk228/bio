@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Typing from "@/components/ui/typing";
 import Card from "@/components/card";
-import { Github, Send, Twitter } from "lucide-react";
+import { Earth, Github, Send, Twitter } from "lucide-react";
 import { Component } from "@/components/etheral-shadow";
 import Link from "next/link";
 
@@ -23,8 +23,15 @@ const cards = [
     description: "@moyaiscanner",
     icon: <Send />,
     link: "https://t.me/moyaiscanner",
+  },
+  {
+    title: "Blog",
+    description: "PrivShare",
+    icon: <Earth />,
+    link: "https://privshare-beta.vercel.app",
   }
 ]
+
 export default function Home() {
       
   return (
@@ -60,7 +67,7 @@ export default function Home() {
           </div>
           <div className="pt-10 flex flex-col items-center justify-center text-sm text-muted-foreground">
             <p>Made with <span><Link href="https://21st.dev" className="hover:text-foreground transition-colors underline">21st.dev</Link></span></p>
-            <p>Source code are available at <span><Link href="https://github.com/yuk228/bio" className="hover:text-foreground transition-colors underline">github</Link></span></p>
+            <p>Source code are available on <span><Link href="https://github.com/yuk228/bio" className="hover:text-foreground transition-colors underline">github</Link></span></p>
           </div>
         </div>
       </div>
