@@ -1,63 +1,49 @@
-import { Earth, Github, Twitter } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
 import Image from "next/image";
-import Link from "next/link";
 import Typing from "@/components/ui/typing";
-import GlowText from "@/components/glow-text";
+import Card from "@/components/card";
+import { Github, Send, Twitter } from "lucide-react";
 
+const cards = [
+  {
+    title: "Github",
+    description: "@yuk228",
+    icon: <Github />,
+    link: "https://github.com/yuk228",
+  },
+  {
+    title: "X",
+    description: "@yy28__",
+    icon: <Twitter />,
+    link: "https://x.com/yy28_",
+  },
+  {
+    title: "Telegram",
+    description: "@moyaiscanner",
+    icon: <Send />,
+    link: "https://t.me/moyaiscanner",
+  }
+]
 export default function Home() {
   return (
-    <main className="relative min-h-screen ">
-      <div className="absolute inset-0 -z-10">
-        <div className="bg-[url('/background.webp')] bg-cover bg-center bg-no-repeat blur-sm h-full w-full"></div>
-      </div>
-      <div className="relative flex items-center justify-center min-h-screen">
-        <div className="container m-4 w-[780px] h-[800px] rounded-3xl flex flex-col items-center bg-sky-500/20 shadow-2xl shadow-foreground/10 border-2 border-sky-500/20">
+    <main>
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="container m-4 w-[780px] h-[800px] rounded-3xl flex flex-col items-center shadow-2xl shadow-foreground/10 border-2 border-zinc-500/20">
           <div className="w-full h-[200px] overflow-hidden">
-            <Image src="/friren.gif" alt="banner" width={780} height={200} className="w-full h-full object-cover rounded-t-3xl"/>
+            <Image src="/banner.gif" alt="banner" width={780} height={200} className="w-full h-full object-cover rounded-t-3xl"/>
           </div>
           <div className="flex items-center justify-center absolute top-[150px] md:top-[180px] left-1/2 transform -translate-x-1/2">
             <Image src="/icon.webp" alt="icon" width={150} height={150} className="rounded-full border-2 border-white/30 shadow-lg"/>
           </div>
           <div className="text-center pt-20">
-            <GlowText className="text-4xl ">browserscan</GlowText>
+            <h2 className="text-4xl font-bold">Yuki</h2>
           </div>
           <div className="py-8 flex flex-col items-center font-bold">
-            <Typing>Hello I&apos;m Japanese Student</Typing>
-            <Typing>REMEMBER ME</Typing>
-            {/* <div className="flex space-x-4 py-5">
-              <Image src="/py.webp" alt="py-logo" width={50} height={50}/>
-              <Image src="/ts.webp" alt="ts-logo" width={50} height={50}/>
-            </div> */}
-            <div className="flex space-x-2 mt-4">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger><Link href="https://x.com/gpt_o3" className="hover:scale-105"><Twitter size={35}/></Link></TooltipTrigger>
-                  <TooltipContent>
-                    <p>Twitter</p>
-                  </TooltipContent>
-                </Tooltip>
-                <Tooltip>
-                  <TooltipTrigger><Link href="https://github.com/yuk228" className="hover:scale-105"><Github size={35}/></Link></TooltipTrigger>
-                  <TooltipContent>
-                    <p>GitHub</p>
-                  </TooltipContent>
-                </Tooltip>
-                <Tooltip>
-                  <TooltipTrigger><Link href="https://privshare-beta.vercel.app" className="hover:scale-105"><Earth size={35}/></Link></TooltipTrigger>
-                  <TooltipContent>
-                    <p>My Blog</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </div>
+            <Typing>日本の学生です</Typing>
           </div>
-          <div className="border-t border-sky-500/20 w-full">
+          <div className="flex flex-col items-center w-full gap-4 px-4">
+            {cards.map((card, key) => (
+              <Card key={key} {...card} />
+            ))}
           </div>
         </div>
       </div>
