@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Typing from "@/components/ui/typing";
 import Card from "@/components/card";
-import { Earth, Github, Send, Twitter } from "lucide-react";
+import { Earth, Github, Rss,Twitter } from "lucide-react";
 import { Component } from "@/components/etheral-shadow";
 import Link from "next/link";
 
@@ -19,13 +19,13 @@ const cards = [
     link: "https://x.com/yy28__",
   },
   {
-    title: "Telegram",
-    description: "@moyaiscanner",
-    icon: <Send />,
-    link: "https://t.me/moyaiscanner",
+    title: "Zenn.dev",
+    description: "@64919",
+    icon: <Rss />,
+    link: "https://zenn.dev/64919",
   },
   {
-    title: "Blog",
+    title: "My Blog",
     description: "PrivShare",
     icon: <Earth />,
     link: "https://privshare-beta.vercel.app",
@@ -59,6 +59,7 @@ export default function Home() {
           </div>
           <div className="py-8 flex flex-col items-center font-bold">
             <Typing>日本の学生です</Typing>
+            <Typing>Web系を勉強しています</Typing>
           </div>
           <div className="flex flex-col items-center w-full gap-4 px-4">
             {cards.map((card, key) => (
