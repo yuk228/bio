@@ -1,7 +1,6 @@
 import React from 'react'
 import { card } from '@/lib/type'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const Card = (props: card) => {
     return (
