@@ -66,7 +66,7 @@ export default function Home() {
               <Card key={key} {...card} />
             ))}
           </div>
-          <div className="pt-10 flex flex-col items-center justify-center text-sm text-muted-foreground">
+          <div className="pt-10 pb-2 flex flex-col items-center justify-center text-sm text-muted-foreground">
             <p>Made with <span><Link href="https://21st.dev" className="hover:text-foreground transition-colors underline">21st.dev</Link></span></p>
             <p>Source code are available on <span><Link href="https://github.com/yuk228/bio" className="hover:text-foreground transition-colors underline">github</Link></span></p>
           </div>
