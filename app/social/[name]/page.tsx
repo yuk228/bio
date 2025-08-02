@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
 
-type Props = {
+interface Props {
   params: Promise<{
     name: string;
   }>;
-};
+}
 
 export default async function Page({ params }: Props) {
   const { name } = await params;
