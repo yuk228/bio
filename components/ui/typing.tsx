@@ -17,9 +17,10 @@ const Typing: React.FC<TypingProps> = ({
   const [displayedText, setDisplayedText] = useState<string>("");
   const [isDelayed, setIsDelayed] = useState<boolean>(true);
 
-  const fixedText = typeof children === "string"
-    ? children
-    : React.Children.toArray(children).join("");
+  const fixedText =
+    typeof children === "string"
+      ? children
+      : React.Children.toArray(children).join("");
 
   useEffect(() => {
     const delayTimeout = setTimeout(() => {
@@ -45,8 +46,7 @@ const Typing: React.FC<TypingProps> = ({
   return (
     <div className="flex">
       <pre className={className}>{displayedText}</pre>
-      <div className="ml-1.5 my-auto relative w-2 h-4 bg-zinc-50 animate-pulse">
-      </div>
+      <div className="ml-1.5 my-auto relative w-2 h-4 bg-zinc-50 animate-pulse"></div>
     </div>
   );
 };
