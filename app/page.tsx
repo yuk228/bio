@@ -10,25 +10,25 @@ const cards = [
     title: "Github",
     description: "@yuk228",
     icon: <Github />,
-    link: "https://github.com/yuk228",
+    link: "https://snowing.moe/social/github",
   },
   {
     title: "X",
     description: "@yy28__",
     icon: <Twitter />,
-    link: "https://x.com/yy28__",
+    link: "https://snowing.moe/social/x",
   },
   {
     title: "Zenn.dev",
     description: "@64919",
     icon: <Rss />,
-    link: "https://zenn.dev/64919",
+    link: "https://snowing.moe/social/zenn",
   },
   {
     title: "My Blog",
     description: "PrivShare",
     icon: <Earth />,
-    link: "https://privshare-beta.vercel.app",
+    link: "https://blog.snowing.moe",
   },
 ];
 
