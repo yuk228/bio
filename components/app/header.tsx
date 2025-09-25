@@ -17,10 +17,10 @@ export default function Header() {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => scrollToSection("projects")}
+            onClick={() => scrollToSection("timeline")}
             className="rounded-full"
           >
-            Languages
+            Timeline
           </Button>
           <Button
             variant="ghost"
@@ -28,7 +28,7 @@ export default function Header() {
             onClick={() => scrollToSection("contact")}
             className="rounded-full"
           >
-            Contact
+            Projects
           </Button>
         </div>
       </div>

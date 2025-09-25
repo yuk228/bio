@@ -59,6 +59,37 @@ export default function Page() {
         </motion.div>
       </section>
 
+      <section id="timeline" className="min-h-screen py-12 px-4">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-6xl mb-8 md:mb-12 text-left">
+            # Timeline
+          </h2>
+          <div className="flex flex-col gap-12">
+            <TimeLineItem
+              date="FEB, 2008"
+              title="Born in Japan"
+              description="日本で産まれる"
+            />
+            <TimeLineItem
+              date="FEB, 2025"
+              title="Start Learning Programming"
+              description="プログラミング学習を開始"
+            />
+            <TimeLineItem
+              date="JUN, 2025"
+              title="Joined miracleave, Inc. as an internship student"
+              description="miracleave株式会社でインターンシップに参加"
+            />
+          </div>
+        </motion.div>
+      </section>
+
       <Button
         onClick={() => scrollToSection("hero")}
         size="icon"
@@ -67,5 +98,28 @@ export default function Page() {
         <ChevronUp className="w-4 h-4" />
       </Button>
     </main>
+  );
+}
+
+type TimeLineProps = {
+  date: string;
+  title: string;
+  description: string;
+};
+
+function TimeLineItem({ date, title, description }: TimeLineProps) {
+  return (
+    <div className="relative flex items-start gap-6">
+      <div className="bg-foreground text-background px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">
+        {date}
+      </div>
+      <div className="relative z-10 mt-3">
+        <div className="w-3 h-3 bg-foreground rounded-full"></div>
+      </div>
+      <div className="flex-1 pt-1">
+        <h2 className="text-xl font-semibold mb-2">{title}</h2>
+        <p className="text-muted-foreground leading-relaxed">{description}</p>
+      </div>
+    </div>
   );
 }
