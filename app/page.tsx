@@ -2,7 +2,7 @@ import Image from "next/image";
 import Typing from "@/components/ui/typing";
 import Card from "@/components/card";
 import { Earth, Github, Rss, Twitter } from "lucide-react";
-import { Component } from "@/components/etheral-shadow";
+
 import Link from "next/link";
 
 const cards = [
@@ -35,16 +35,6 @@ const cards = [
 export default function Page() {
   return (
     <main>
-      <div className="absolute inset-0 -z-10">
-        <div className="h-full w-full">
-          <Component
-            color="rgba(128, 128, 128, 1)"
-            animation={{ scale: 100, speed: 90 }}
-            noise={{ opacity: 1, scale: 1.2 }}
-            sizing="fill"
-          />
-        </div>
-      </div>
       <div className="flex items-center justify-center min-h-screen">
         <div className="container m-4 w-[780px] h-[800px] rounded-3xl flex flex-col items-center shadow-2xl shadow-foreground/10 border-2 border-zinc-500/20">
           <div className="w-full h-[125px]"></div>
