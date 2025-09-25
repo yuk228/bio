@@ -16,15 +16,15 @@ import { scrollToSection } from "@/components/app/header";
 const CARDS = [
   {
     icon: <Github />,
-    link: "social/github",
+    link: "https://github.com/yuk228",
   },
   {
     icon: <Twitter />,
-    link: "social/x",
+    link: "https://x.com/yuki_228__",
   },
   {
     icon: <Rss />,
-    link: "/social/zenn",
+    link: "https://zenn.dev/64919",
   },
   {
     icon: <Earth />,
