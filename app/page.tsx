@@ -11,8 +11,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-
-
 import { scrollToSection } from "@/components/app/header";
 
 const CARDS = [
@@ -46,8 +44,10 @@ export default function Page() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-6xl mb-12">Hello, I'm Yuki 👋</h2>
-          
+          <h2 className="text-4xl md:text-6xl mb-12">
+            Hello, I&apos;m Yuki 👋
+          </h2>
+
           <div className="flex flex-row gap-8 mx-auto justify-center mb-12">
             {CARDS.map((card, index) => (
               <Link href={card.link} key={index} className="scale-140">
