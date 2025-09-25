@@ -1,9 +1,10 @@
 import { redirect } from "next/navigation";
 
-interface Props {
-  params: Promise<{
-    name: string;
-  }>;
+type Params = {
+  name: string;
+}
+type Props = {
+  params: Promise<Params>;
 }
 
 export default async function Page({ params }: Props) {
