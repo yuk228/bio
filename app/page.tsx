@@ -1,7 +1,19 @@
-import { motion } from "motion/react"
-import { Earth, Github, Rss, Twitter } from "lucide-react";
+"use client";
 
+import { motion } from "framer-motion";
+import {
+  ArrowDown,
+  ChevronUp,
+  Earth,
+  Github,
+  Rss,
+  Twitter,
+} from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+
+import { scrollToSection } from "@/components/app/header";
 
 const CARDS = [
   {
@@ -24,19 +36,36 @@ const CARDS = [
 
 export default function Page() {
   return (
-    <main>
-      <div className="min-h-screen flex flex-col items-center justify-center max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-center">Hello, I'm Yuki 👋</h2>
-        <div className="pt-10">
-          <div className="flex flex-row gap-8">
+    <main className="min-h-screen">
+      <section
+        id="hero"
+        className="min-h-screen flex items-center justify-center"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-4xl md:text-6xl mb-12">Hello, I'm Yuki 👋</h2>
+          
+          <div className="flex flex-row gap-8 mx-auto justify-center mb-12">
             {CARDS.map((card, index) => (
-              <Link href={card.link} key={index} className="scale-123">
+              <Link href={card.link} key={index} className="scale-140">
                 {card.icon}
               </Link>
             ))}
           </div>
-        </div>
-      </div>
+          <ArrowDown className="w-6 h-6 mx-auto animate-bounce cursor-pointer" />
+        </motion.div>
+      </section>
+
+      <Button
+        onClick={() => scrollToSection("hero")}
+        size="icon"
+        className="fixed bottom-8 right-8 rounded-full shadow-lg"
+      >
+        <ChevronUp className="w-4 h-4" />
+      </Button>
     </main>
   );
 }
