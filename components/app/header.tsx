@@ -25,7 +25,7 @@ export default function Header() {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("projects")}
             className="rounded-full"
           >
             Projects
