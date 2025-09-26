@@ -26,10 +26,6 @@ const CARDS = [
     icon: <Rss />,
     link: "https://zenn.dev/64919",
   },
-  {
-    icon: <Earth />,
-    link: "https://blog.snowing.moe",
-  },
 ];
 
 export default function Page() {
