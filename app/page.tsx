@@ -1,14 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ArrowDown,
-  ChevronUp,
-  Earth,
-  Github,
-  Rss,
-  Twitter,
-} from "lucide-react";
+import { ArrowDown, ChevronUp, Github, Rss, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/components/app/header";
