@@ -22,8 +22,13 @@ export default function Header() {
               Blogs
             </Button>
           </Link>
-          <Button variant="ghost" size="sm" className="rounded-full">
-            Contact
+          <Button
+            variant="ghost"
+            size="sm"
+            className="rounded-full"
+            onClick={() => scrollToSection("projects")}
+          >
+            Projects
           </Button>
           <ThemeToggle />
         </div>

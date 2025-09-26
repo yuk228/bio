@@ -5,6 +5,8 @@ import { ArrowDown, ChevronUp, Github, Rss, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/components/app/header";
+import { TimeLineItem } from "@/components/app/timeline";
+import { Card } from "@/components/app/card";
 
 const CARDS = [
   {
@@ -18,6 +20,62 @@ const CARDS = [
   {
     icon: <Rss />,
     link: "https://zenn.dev/64919",
+  },
+];
+
+const PROJECTS = [
+  {
+    title: "PrivShare",
+    description:
+      "PrivShareは、匿名化に特化したプライバシーブログです。あなたの個人情報がビジネスに使用されるのを防ぐため、匿名化について学びましょう。",
+    link: "https://blog.snowing.moe",
+    github: "https://github.com/yuk228/privshare-blog",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Prisma",
+      "Supabase",
+      "Authentication",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    title: "Loggify",
+    description:
+      "Loggifyは、Discord OAuth2を使用したWeb認証 + ロギングシステムです。認証したユーザーのユーザー名、IPアドレス、ブラウザ情報、GPS情報等を収集しDatabaseに保存します。",
+    link: "https://loggify-auth.vercel.app/",
+    github: "https://github.com/yuk228/Loggify",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Supabase",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    title: "VPN Detector",
+    description:
+      "IPアドレスに基づいてVPN、プロキシ、ホスティングサービスを検出するAPIです。ASNリストを使用しています。",
+    link: "https://vpn-detect-api.vercel.app/api",
+    github: "https://github.com/yuk228/vpn-detect-api",
+    technologies: ["TypeScript", "React", "Next.js"],
+  },
+  {
+    title: "Onion Note",
+    description:
+      "Onion Noteは、E2EEのテキスト共有アプリです。国際化に対応しています。",
+    link: "https://onion-note.vercel.app//",
+    github: "https://github.com/yuk228/onion-note",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Supabase",
+      "Tailwind CSS",
+      "i18n",
+    ],
   },
 ];
 
@@ -102,6 +160,18 @@ export default function Page() {
           <h2 className="text-3xl md:text-4xl lg:text-6xl mb-8 md:mb-12 text-left">
             # Projects
           </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
+            {PROJECTS.map((project, index) => (
+              <Card
+                key={index}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                github={project.github}
+                technologies={project.technologies}
+              />
+            ))}
+          </div>
         </motion.div>
       </section>
 
@@ -113,28 +183,5 @@ export default function Page() {
         <ChevronUp className="w-4 h-4" />
       </Button>
     </main>
-  );
-}
-
-type TimeLineProps = {
-  date: string;
-  title: string;
-  description: string;
-};
-
-function TimeLineItem({ date, title, description }: TimeLineProps) {
-  return (
-    <div className="relative flex items-start gap-6">
-      <div className="bg-foreground text-background px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">
-        {date}
-      </div>
-      <div className="relative z-10 mt-3">
-        <div className="w-3 h-3 bg-foreground rounded-full"></div>
-      </div>
-      <div className="flex-1 pt-1">
-        <h2 className="text-xl font-semibold mb-2">{title}</h2>
-        <p className="text-muted-foreground leading-relaxed">{description}</p>
-      </div>
-    </div>
   );
 }
