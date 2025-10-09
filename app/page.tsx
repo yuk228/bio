@@ -62,21 +62,6 @@ const PROJECTS = [
     github: "https://github.com/yuk228/vpn-detect-api",
     technologies: ["TypeScript", "React", "Next.js"],
   },
-  {
-    title: "Onion Note",
-    description:
-      "Onion Noteは、E2EEのテキスト共有アプリです。国際化に対応しています。",
-    link: "https://onion-note.vercel.app//",
-    github: "https://github.com/yuk228/onion-note",
-    technologies: [
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Supabase",
-      "Tailwind CSS",
-      "i18n",
-    ],
-  },
 ];
 
 export default function Page() {
