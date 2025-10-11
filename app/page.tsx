@@ -64,6 +64,29 @@ const PROJECTS = [
   },
 ];
 
+const TIMELINES = [
+  {
+    date: "FEB, 2008",
+    title: "Borned in Japan",
+    description: "日本で産まれる",
+  },
+  {
+    date: "APR, 2022",
+    title: "Entered high school",
+    description: "高校に入学",
+  },
+  {
+    date: "FEB, 2025",
+    title: "Started Learning Programming",
+    description: "プログラミング学習を開始",
+  },
+  {
+    date: "JUN, 2025",
+    title: "Joined miracleave corporation as an internship student",
+    description: "miracleave株式会社でインターンシップに参加",
+  },
+];
+
 export default function Page() {
   return (
     <main className="min-h-screen">
@@ -106,26 +129,14 @@ export default function Page() {
             # Timeline
           </h2>
           <div className="flex flex-col gap-12 mb-24">
-            <TimeLineItem
-              date="FEB, 2008"
-              title="Borned in Japan"
-              description="日本で産まれる"
-            />
-            <TimeLineItem
-              date="APR, 2022"
-              title="Entered high school"
-              description="高校に入学"
-            />
-            <TimeLineItem
-              date="FEB, 2025"
-              title="Started Learning Programming"
-              description="プログラミング学習を開始"
-            />
-            <TimeLineItem
-              date="JUN, 2025"
-              title="Joined miracleave corporation as an internship student"
-              description="miracleave株式会社でインターンシップに参加"
-            />
+            {TIMELINES.map((timeline, index) => (
+              <TimeLineItem
+                key={index}
+                date={timeline.date}
+                title={timeline.title}
+                description={timeline.description}
+              />
+            ))}
           </div>
           <ArrowDown
             className="w-6 h-6 mx-auto animate-bounce cursor-pointer"
